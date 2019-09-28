@@ -21,7 +21,7 @@ let sourceBuffer;
 
 const uploadButton = document.querySelector('button#upload');
 const errorMsgElement = document.querySelector('span#errorMsg');
-const recordedVideo = document.querySelector('video#recorded');
+const recordedVideo = document.querySelector('video#gum');
 const recordButton = document.querySelector('button#record');
 recordButton.addEventListener('click', () => {
   if (recordButton.textContent == 'Start Recording') {
