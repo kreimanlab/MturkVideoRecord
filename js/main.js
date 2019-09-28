@@ -19,11 +19,12 @@ let mediaRecorder;
 let recordedBlobs;
 let sourceBuffer;
 
+const uploadButton = document.querySelector('button#upload');
 const errorMsgElement = document.querySelector('span#errorMsg');
 const recordedVideo = document.querySelector('video#recorded');
 const recordButton = document.querySelector('button#record');
 recordButton.addEventListener('click', () => {
-  if (recordButton.textContent === 'Start Recording') {
+  if (recordButton.textContent == 'Start Recording') {
     startRecording();
   } else {
     stopRecording();
@@ -53,10 +54,12 @@ downloadButton.addEventListener('click', () => {
   a.download = 'test.webm';
   document.body.appendChild(a);
   a.click();
+  uploadButton.disabled = false;
   setTimeout(() => {
     document.body.removeChild(a);
     window.URL.revokeObjectURL(url);
   }, 100);
+  
 });
 
 function handleSourceOpen(event) {
@@ -130,12 +133,11 @@ async function init(constraints) {
     handleSuccess(stream);
   } catch (e) {
     console.error('navigator.getUserMedia error:', e);
-    errorMsgElement.innerHTML = `navigator.getUserMedia error:${e.toString()}`;
+    errorMsgElement.innerHTML = `Whoops! Your phone is not compatable with our current API. Please open your camera to shoot the video and email the video to a0091624@gmail.com`;
   }
 }
 
 document.querySelector('button#start').addEventListener('click', async () => {
-  //const hasEchoCancellation = document.querySelector('#echoCancellation').checked;
   const constraints = {
     audio: false,
     video: {
