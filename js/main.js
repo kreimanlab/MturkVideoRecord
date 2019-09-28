@@ -31,6 +31,7 @@ recordButton.addEventListener('click', () => {
     recordButton.textContent = 'Start Recording';
     playButton.disabled = false;
     downloadButton.disabled = false;
+    uploadButton.disabled = false;
   }
 });
 
