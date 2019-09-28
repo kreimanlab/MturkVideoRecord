@@ -140,8 +140,8 @@ document.querySelector('button#start').addEventListener('click', async () => {
     audio: false,
     video: {
       width: 1280, height: 720, //video resolution
-      frameRate: {ideal: 20, max: 30, min: 15}//, //video frame rate
-      facingMode: 'environment' //rear camera on
+      frameRate: {ideal: 20, max: 30, min: 15}, //video frame rate
+      facingMode: { exact: 'environment'} //rear camera on
     }
   };
   console.log('Using media constraints:', constraints);
