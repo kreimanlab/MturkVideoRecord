@@ -88,7 +88,8 @@ function startRecording() {
       options = {mimeType: 'video/webm'};
       if (!MediaRecorder.isTypeSupported(options.mimeType)) {
         console.error(`${options.mimeType} is not Supported`);
-        errorMsgElement.innerHTML = `${options.mimeType} is not Supported`;
+        //errorMsgElement.innerHTML = `${options.mimeType} is not Supported`;
+        errorMsgElement.innerHTML = `Whoops! Your phone is not compatable with our current API. Please see **notes** below for actions. Thanks! <br /> Error message: ${options.mimeType} is not Supported`;
         options = {mimeType: ''};
       }
     }
@@ -98,7 +99,9 @@ function startRecording() {
     mediaRecorder = new MediaRecorder(window.stream, options);
   } catch (e) {
     console.error('Exception while creating MediaRecorder:', e);
-    errorMsgElement.innerHTML = `Exception while creating MediaRecorder: ${JSON.stringify(e)}`;
+    //errorMsgElement.innerHTML = `Exception while creating MediaRecorder: ${JSON.stringify(e)}`;
+    errorMsgElement.innerHTML = `Whoops! Your phone is not compatable with our current API. Please see **notes** below for actions. Thanks! <br /> Error message: Exception while creating MediaRecorder: ${JSON.stringify(e)}`;
+        
     return;
   }
 
