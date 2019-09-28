@@ -23,7 +23,7 @@ p.borderBelow {
 
 video {
   vertical-align: top;
-  --width: 500vw;
+  --width: 600vw;
   width: var(--width);
   height: calc(var(--width) * 0.5625);
 }
@@ -33,5 +33,5 @@ video:last-of-type {
 }
 
 video#gumVideo {
-  margin: 0 500px 500px 0;
+  margin: 0 600px 600px 0;
 }
