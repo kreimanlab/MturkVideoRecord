@@ -19,7 +19,6 @@ let mediaRecorder;
 let recordedBlobs;
 let sourceBuffer;
 
-const uploadButton = document.querySelector('button#upload');
 const errorMsgElement = document.querySelector('span#errorMsg');
 const recordedVideo = document.querySelector('video#gum');
 const recordButton = document.querySelector('button#record');
@@ -31,7 +30,7 @@ recordButton.addEventListener('click', () => {
     recordButton.textContent = 'Start Recording';
     playButton.disabled = false;
     downloadButton.disabled = false;
-    uploadButton.disabled = false;
+    //uploadButton.disabled = false;
   }
 });
 
@@ -45,6 +44,7 @@ playButton.addEventListener('click', () => {
   recordedVideo.play();
 });
 
+const uploadButton = document.querySelector('button#upload');
 const downloadButton = document.querySelector('button#download');
 downloadButton.addEventListener('click', () => {
   const blob = new Blob(recordedBlobs, {type: 'video/webm'});
