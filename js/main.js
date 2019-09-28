@@ -134,7 +134,8 @@ async function init(constraints) {
     handleSuccess(stream);
   } catch (e) {
     console.error('navigator.getUserMedia error:', e);
-    errorMsgElement.innerHTML = `Whoops! Your phone is not compatable with our current API. Please open your camera to shoot the video and email the video to a0091624@gmail.com`;
+    errorMsgElement.innerHTML = `Whoops! Your phone is not compatable with our current API. Please see **notes** below for actions. Thanks! <br /> Error message: navigator.getUserMedia error:${e.toString()}`;
+    //errorMsgElement.innerHTML = `navigator.getUserMedia error:${e.toString()}`;
   }
 }
 
