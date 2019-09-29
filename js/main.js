@@ -36,7 +36,8 @@ recordButton.addEventListener('click', () => {
 
 const playButton = document.querySelector('button#play');
 playButton.addEventListener('click', () => {
-  const superBuffer = new Blob(recordedBlobs, {type: 'video/webm'});
+  //const superBuffer = new Blob(recordedBlobs, {type: 'video/webm'});
+  const superBuffer = new Blob(recordedBlobs, {type: 'video/mp4'});
   recordedVideo.src = null;
   recordedVideo.srcObject = null;
   recordedVideo.src = window.URL.createObjectURL(superBuffer);
@@ -52,7 +53,7 @@ downloadButton.addEventListener('click', () => {
   const a = document.createElement('a');
   a.style.display = 'none';
   a.href = url;
-  a.download = 'test.webm';
+  a.download = 'klabmturk.mp4';
   document.body.appendChild(a);
   a.click();
   uploadButton.disabled = false;
@@ -65,7 +66,8 @@ downloadButton.addEventListener('click', () => {
 
 function handleSourceOpen(event) {
   console.log('MediaSource opened');
-  sourceBuffer = mediaSource.addSourceBuffer('video/webm; codecs="vp8"');
+  //sourceBuffer = mediaSource.addSourceBuffer('video/webm; codecs="vp8"');
+  sourceBuffer = mediaSource.addSourceBuffer('video/mp4; codecs="avc1.4d0020,mp4a.40.2"');
   console.log('Source buffer: ', sourceBuffer);
 }
 
