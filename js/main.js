@@ -148,8 +148,7 @@ document.querySelector('button#start').addEventListener('click', async () => {
   const constraints = {
     audio: false,
     video: {
-      width: {ideal: 1280},
-      height: {ideal: 720}, //video resolution
+      width: 1280, height: 720, //video resolution
       frameRate: {ideal: 20, max: 30, min: 15}, //video frame rate
       facingMode: { ideal: 'environment'} //rear camera on
     }
