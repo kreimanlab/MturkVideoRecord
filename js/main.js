@@ -137,6 +137,7 @@ async function init(constraints) {
   try {
     const stream = await navigator.mediaDevices.getUserMedia(constraints);
     handleSuccess(stream);
+    console.log('open camera successfully')
   } catch (e) {
     console.error('navigator.getUserMedia error:', e);
     errorMsgElement.innerHTML = `Whoops! Your phone is not compatable with our current API. Please see **notes** below for actions. Thanks! <br /> Error message: navigator.getUserMedia error:${e.toString()}`;
