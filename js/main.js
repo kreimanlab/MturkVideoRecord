@@ -9,7 +9,7 @@
 // This code is adapted from
 // https://rawgit.com/Miguelao/demos/master/mediarecorder.html
 
-'use strict';
+//'use strict';
 
 /* globals MediaRecorder */
 
