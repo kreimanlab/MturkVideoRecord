@@ -48,7 +48,7 @@ playButton.addEventListener('click', () => {
 const uploadButton = document.querySelector('button#upload');
 const downloadButton = document.querySelector('button#download');
 downloadButton.addEventListener('click', () => {
-  const blob = new Blob(recordedBlobs, {type: 'video/webm'});
+  const blob = new Blob(recordedBlobs, {type: 'video/mp4'});
   const url = window.URL.createObjectURL(blob);
   const a = document.createElement('a');
   a.style.display = 'none';
@@ -150,8 +150,8 @@ document.querySelector('button#start').addEventListener('click', async () => {
     video: {
       width: 1280, height: 720, //video resolution
       frameRate: {ideal: 20, max: 30, min: 15}, //video frame rate
-      facingMode: 'user'
-      //facingMode: { exact: 'user'} //rear camera on
+      //facingMode: 'user'
+      facingMode: { ideal: 'environment'} //rear camera on
     }
   };
   console.log('Using media constraints:', constraints);
