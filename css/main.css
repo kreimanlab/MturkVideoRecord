@@ -25,7 +25,7 @@ video {
   vertical-align: top;
   --width: 70vw;
   width: var(--width);
-  height: calc(var(--width) * 1.25);
+  height: calc(var(--width) * 0.8);
 }
 
 video:last-of-type {
