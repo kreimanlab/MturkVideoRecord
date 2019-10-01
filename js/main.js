@@ -151,7 +151,7 @@ document.querySelector('button#start').addEventListener('click', async () => {
     video: {
       width: {ideal: 512, min: 256},
       height: {ideal: 640, min: 320}, //video resolution
-      frameRate: {ideal: 20, max: 30, min: 15}//, //video frame rate
+      frameRate: {ideal: 20, max: 30, min: 15}, //video frame rate
       //facingMode: 'user'
       facingMode: { ideal: 'environment'} //rear camera on
     }
